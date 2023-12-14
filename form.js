@@ -161,7 +161,18 @@ $(document).ready(() => {
 
       if (isValid) {
          event.preventDefault();
-         showSuccessLoginMessage();
+         const username = 'user@example.com'; // Replace with the actual username
+         const password = 'password'; // Replace with the actual password
+
+         if (email === username && password === $("#l_password").val().trim()) {
+            // Redirect to index.html on successful login
+            window.location.href = 'index.html';
+         } else {
+            // Display an error message or handle unsuccessful login
+            console.log('Invalid credentials. Please try again.');
+            // Show the success message for demonstration purposes (Remove in production)
+            showSuccessLoginMessage();
+         }
       }
 
    });
