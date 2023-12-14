@@ -1,0 +1,323 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    /* Additional body styles */
+  }
+  
+  /* Product grid styles */
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    /* Additional styles for product container */
+  }
+  
+  .product {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    /* Additional styles for individual product tile */
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    display: block; /* Ensure centered alignment */
+  margin: 0 auto;
+  }
+  
+  .product h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    /* Additional styles for product name */
+  }
+  
+  .add-to-cart {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Additional styles for Add to Cart button */
+  }
+
+
+  /* Resetting default margin and padding */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+    color: #242424;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+body,
+html {
+    height: 100%
+}
+
+img {
+    max-width: 100%
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+header {
+    box-shadow: 0 0 7px 0 #d2d2d2;
+}
+
+.logo a img {
+    width: 200px;
+    float: left;
+    height: auto;
+    /* height: 100px; */
+}
+
+/* nav li {
+    display: inline-block;
+}
+
+nav {
+    float: right;
+    width: auto;
+    margin: 15px 0;
+}
+
+nav li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #000000;
+}
+
+nav li a:hover {
+    color: #e0a400;
+} */
+
+nav {
+    float: none; /* Remove the float */
+    text-align: center; /* Center align the navigation items */
+    width: 100%; /* Set the width to 100% */
+    margin: 15px 0;
+}
+
+nav ul {
+    display: inline-block; /* Display the list horizontally */
+}
+
+nav li {
+    display: inline-block; /* Display list items inline */
+    margin: 0 10px; /* Add some spacing between list items */
+}
+
+nav li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #000000;
+}
+
+nav li a:hover {
+    color: #e0a400;
+}
+
+/* Top bar styles */
+.top-bar.full-wid {
+    background-color: #151617;
+    padding: 11px;
+}
+
+.wrapper {
+    max-width: 1380px;
+    margin: 0 auto;
+}
+
+.top-bar-contact a {
+    color: #fff;
+    padding-right: 20px;
+}
+
+.top-bar-contact a i {
+    padding-right: 5px;
+}
+
+#toggle {
+    display: none;
+}
+
+.active a{
+    font-weight: 600;
+    font-size: 20px;
+}
+.nav-ul a{
+    font-weight: 600;
+    font-size: 20px;
+
+}
+
+.header-main .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure the container occupies the full width */
+}
+
+.nav-ul {
+    margin-right: auto; /* Pushes the nav-ul to the left */
+}
+
+#logout {
+    font-weight: 600;
+    font-size: 15px;
+    color: black;
+    margin-right: 20px;
+
+}
+
+
+@media (max-width: 768px) {
+    /* Mobile responsive styles */
+    .logo img {
+        max-width: 240px;
+    }
+
+    nav {
+        margin: 8px 0;
+    }
+
+    .top-bar-contact a {
+        width: 100%;
+        float: left;
+        text-align: center;
+        padding: 4px;
+    }
+}
+
+/* Footer CSS */
+footer {
+    box-shadow: 0 0 7px 0 #d2d2d2;
+  }
+footer .footer-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    padding: 55px 0;
+}
+
+footer .footer-inner h5 {
+    font-size: 17px;
+    color: #2a3741;
+}
+
+footer .footer-inner li {
+    padding-bottom: 7px;
+}
+
+footer .social-icons li a {
+    background-color: #f8b600;
+    width: 41px;
+    height: 41px;
+    padding: 10px 12px;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+}
+
+.footer-inner .nav-ul li a {
+    font-size: 14px; /* Decrease the font size for footer links */
+  }
+
+.copyright {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 10px 60px;
+    background-color: #1d1e1f;
+    color: #ffffff;
+    border-top: 1px solid #16191e;
+}
+  
+
+/* CSS for cart section */
+.cart-section {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: 10px; /* Adjust the margin as needed */
+}
+
+.cart-icon img {
+    width: 30px; /* Set the width of the cart icon */
+    height: auto;
+}
+
+.cart-count {
+    margin-left: 5px; /* Adjust the spacing between icon and count */
+}
+
+/* slideshow */
+
+.carousel {
+    width: 100%; /* Adjust the width of the carousel container */
+  }
+  
+.carousel img {
+    width: 100%; /* Set the image width to 100% of the parent container */
+    height: 100%; /* Maintain the aspect ratio */
+    /* Optionally, you can set a fixed height for the images */
+    /* height: 300px; */
+    /* Adjust the height as needed */
+  }
+
+  .top-brands {
+    text-align: center;
+}
+
+.brand-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.brand-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.brand-images img {
+    max-width: 200px;
+    height: auto;
+    /* Adjust image size as needed */
+}
+  

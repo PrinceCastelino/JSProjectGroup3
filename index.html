@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="top-bar full-wid">
+            <div class="wrapper">
+                <div class="top-bar-contact">
+                    <a href="tel:(123)-456-7890">
+                        <i class="fa-solid fa-phone"></i>Phone: +1 (123)-456-7890
+                    </a>	
+                     <a href="mailto:info@packard.com">
+                        <i class="fa-solid fa-envelope"></i>Email: info@packard.com
+                    </a>  
+                </div>
+            </div>
+        </div>
+        <div class="header-main">
+            <div class="wrapper">
+                <div class="header-inner full-wid">
+                    <div class="logo">
+                        <a class="logo-link" href="index.html">
+                            <img src="images/New_logo.png" width="600" alt="Logo">
+                        </a>
+                    </div>
+                    <nav class="navigation">
+                        <div id="toggle">
+                            <i class="fa fa-bars"></i>
+                        </div>
+                        <ul class="nav-ul">
+                            <li class="active">
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="products.html">Products</a>
+                            </li>
+                            <li>
+                                <a href="about.html">About us</a>
+                            </li>                         
+                        </ul>
+                    </nav>
+                    <div id="logout">
+                        <a href="login.html">
+                            <img src="images/logout.png" alt="Logout">
+                        </a>
+                    </div>
+                    <div class="cart-section">
+                        <div class="cart-icon">
+                            <img src="images/cart.png" alt="Cart Icon">
+                        </div>
+                        <div class="cart-count">0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<main class="products">
+
+    <!-- Slideshow/Carousel -->
+    <div class="slideshow">
+        <div class="carousel" data-slide="0">
+            <img src="images/sale_option_1.png" alt="Slide 1">
+        </div>
+        <div class="carousel" data-slide="1">
+            <img src="images/sale_option_3.png" alt="Slide 2">
+        </div>
+
+        <div class="carousel" data-slide="2">
+            <img src="images/sale_option_4.png" alt="Slide 3">
+        </div>
+      
+    </div>
+
+    <!-- Top Brands Section -->
+    <section class="top-brands">
+        <div class="wrapper">
+            <h2 class="center-align">Top Brands</h2>
+            <div class="brand-images">
+                <!-- Image placeholders for 8 brands -->
+                <!-- Arrange the images in rows of 4 -->
+                <div class="brand-row">
+                    <img src="images/fender_250x.avif" alt="Brand 1">
+                    <img src="images/ibanez_250x.avif" alt="Brand 2">
+                    <img src="images/vault_250x.avif" alt="Brand 3">
+                    <img src="images/alesis_250x.avif" alt="Brand 4">
+                </div>
+                <div class="brand-row">
+                    <img src="images/yamaha_250x.avif" alt="Brand 5">
+                    <img src="images/kala_250x.avif" alt="Brand 6">
+                    <img src="images/presonus_250x.avif" alt="Brand 7">
+                    <img src="images/focusrite-br_250x.avif" alt="Brand 8">
+                </div>
+                <!-- Add more image placeholders as needed -->
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="full-wid">
+    <div class="wrapper">
+        <div class="footer-inner">
+            <div class="footer-widget">
+                <a class="logo-link" href="index.html">
+                    <img src="images/New_logo.png" width="300" alt="Logo">
+                </a>
+            </div>
+            <div class="footer-widget">
+                <h5>Quick Links</h5>
+                <ul class="nav-ul">
+                    <li class="active">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="products.html">Products</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Store Hours</h5>
+                <ul>
+                    <li>Monday 8.30am – 5pm</li>
+                    <li>Tuesday 8.30am – 5pm</li>
+                    <li>Wednesday 8.30am – 5pm</li>
+                    <li>Thursday 8.30am – 5pm</li>
+                    <li>Friday 9.00am – 3pm</li>
+                    <li>Satuday 8.30am – 1.30pm</li>
+                    <li>Sunday Closed</li>
+                </ul>
+            </div>
+            <div class="footer-widget">
+                <h5>Contact Information</h5>
+                <ul>
+                    <li><b>Address</b> - 50 Wellington St, Brantford, Ontario, Canada, N3S 3Z8</li>
+                    <li><b>Phone</b> - <a href="tel:1234567890">+1 (123)-456-7890</a></li>
+                    <li><b>Email</b> - <a href="mailto:info@packard.com">info@packard.com</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2023 Packard Music | All Right Reserved.
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="slideshow.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>
