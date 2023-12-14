@@ -29,7 +29,7 @@
     padding: 20px;
     margin: 20px;
     width: 300px;
-    /* Additional styles for individual product tile */
+    position: relative;
   }
   
   .product img {
@@ -320,4 +320,11 @@ footer .social-icons li a {
     height: auto;
     /* Adjust image size as needed */
 }
-  
+
+/* product price  */
+.product-price {
+    font-size: 16px; /* Adjust the font size of the price */
+    color: #333; /* Define the color for the price text */
+    margin-bottom: 10px; /* Add spacing between product name and price */
+    display: block; /* Ensure the price is displayed in a separate line */
+}
