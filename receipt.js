@@ -1,48 +1,61 @@
 "use strict";
-   // Retrieve data from the query string
-   const queryString = window.location.search;
-   const urlParams = new URLSearchParams(queryString);
 
-   // Get values using the parameter names (e.g., orderId, totalPrice)
-   const orderId = urlParams.get('orderId');
-   const totalPrice = urlParams.get('totalPrice');
+// Retrieve data from the query string
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
 
-   // Retrieve cart data from session storage
-   const storedCartItems = sessionStorage.getItem('cartItems');
+// Get values using the parameter names (e.g., orderId, totalPrice)
+const orderId = urlParams.get('orderId');
+const totalPrice = urlParams.get('totalPrice');
 
-   let cartItems; // Declare a variable to store cart items
+// Retrieve cart data from session storage
+const storedCartItems = sessionStorage.getItem('cartItems');
 
-   if (storedCartItems) {
-       // Parse the JSON string to get the cart data
-       cartItems = JSON.parse(storedCartItems);
+let cartItems; // Declare a variable to store cart items
 
-       // Update HTML content with retrieved data
-       document.getElementById('orderId').textContent = orderId;
+if (storedCartItems) {
+    // Parse the JSON string to get the cart data
+    cartItems = JSON.parse(storedCartItems);
 
-       const cartItemsBody = document.getElementById('cartItemsBody');
-       const totalContainer = document.getElementById('totalPrice');
+    // Update HTML content with retrieved data
+    document.getElementById('orderId').textContent = orderId;
 
-       // Loop through cart items and display them
-       cartItems.forEach(item => {
-           const row = document.createElement('tr');
+    const cartItemsBody = document.getElementById('cartItemsBody');
+    const totalContainer = document.getElementById('totalPrice');
 
-           row.innerHTML = `
-               <td><img src="${item.image}" alt="${item.name}"></td>
-               <td>${item.name}</td>
-               <td>$${item.price.toFixed(2)}</td>
-               <td>${item.quantity}</td>
-               <td>$${(item.price * item.quantity).toFixed(2)}</td>
-           `;
+    // Loop through cart items and display them
+    cartItems.forEach(item => {
+        // Create a table row for each item
+        const row = createTableRow(item);
 
-           cartItemsBody.appendChild(row);
-       });
+        // Append the row to the cart items body
+        cartItemsBody.appendChild(row);
+    });
 
-       totalContainer.textContent = totalPrice;
-   } else {
-       // Handle the case when there are no cart items
-       console.error('No cart items found.');
-   }
+    // Display the total price
+    totalContainer.textContent = totalPrice;
+} else {
+    // Handle the case when there are no cart items
+    console.error('No cart items found.');
+}
 
-   function printInvoice() {
-       window.print();
-   }
+// Function to create a table row for a cart item
+function createTableRow(item) {
+    const row = document.createElement('tr');
+
+    // Set innerHTML with item details
+    row.innerHTML = `
+        <td><img src="${item.image}" alt="${item.name}"></td>
+        <td>${item.name}</td>
+        <td>$${item.price.toFixed(2)}</td>
+        <td>${item.quantity}</td>
+        <td>$${(item.price * item.quantity).toFixed(2)}</td>
+    `;
+
+    return row;
+}
+
+// Function to print the invoice
+function printInvoice() {
+    window.print();
+}
