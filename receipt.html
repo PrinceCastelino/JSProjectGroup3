@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="receipt.css">
+</head>
+<body>
+
+<div class="invoice">
+    <div class="invoice-header">
+        <h2>Invoice</h2>
+    </div>
+
+    <div class="invoice-details">
+        <p><strong>Order ID:</strong> <span id="orderId"></span></p>
+    </div>
+
+    <div class="cart-items">
+        <h3>Cart Items</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cartItemsBody"></tbody>
+        </table>
+    </div>
+
+    <div class="total-price">
+        <p><strong>Total Price:</strong> $<span id="totalPrice"></span></p>
+    </div>
+
+    <div class="print-button">
+        <button onclick="printInvoice()">Print Invoice</button>
+    </div>
+</div>
+
+<script src="receipt.js"></script>
+
+</body>
+</html>

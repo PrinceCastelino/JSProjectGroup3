@@ -1,0 +1,102 @@
+#container {
+    display: flex;
+    width: 100%; /* Use 100% width of the main container */
+}
+
+#sidebar {
+    width: 20%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    transition: 0.5s;
+    overflow: hidden; /* Ensure content is visible when collapsed */
+}
+
+#sidebarCollapseBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+}
+
+#content {
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.5s;
+    overflow: auto; /* Add overflow for content to make it scrollable */
+}
+
+.payment-option {
+    margin-bottom: 20px;
+    display: none; /* Initially hide all payment options */
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+/* Added new class for collapsed sidebar */
+.main.collapsed #sidebar {
+    width: 0;
+}
+
+/* Adjusted content margin when sidebar is collapsed */
+.main.collapsed #content {
+    margin-left: 0;
+}
+h1{
+    text-align: center;
+}
+/* Add this to your existing styles or create a new CSS file */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px #000;
+    z-index: 1;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  #errorPopupContent {
+    /* Allow line breaks */
+    white-space: pre-line;
+  }
+  
